@@ -6,9 +6,9 @@ export default function TaskList({
   children: React.ReactNode;
 }) {
   return (
-    <>
+    <div className="flex flex-col gap-2">
       {header}
-      <ul>{children}</ul>
-    </>
+      <ul className="space-y-2">{children}</ul>
+    </div>
   );
 }

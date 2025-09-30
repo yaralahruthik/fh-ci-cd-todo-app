@@ -38,16 +38,16 @@ export default function AddTask({
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="flex items-end gap-4"
+        className="flex flex-col gap-2 sm:flex-row"
       >
         <FormField
           control={form.control}
           name="taskName"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Task Name</FormLabel>
+              <FormLabel className="sr-only">Task Name</FormLabel>
               <FormControl>
-                <Input placeholder="What do you need to do?" {...field} />
+                <Input placeholder="What is the task?" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>

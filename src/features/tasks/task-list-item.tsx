@@ -3,5 +3,5 @@ export default function TaskListItem({
 }: {
   children: React.ReactNode;
 }) {
-  return <li>{children}</li>;
+  return <li className="border p-4 rounded-sm font-bold">{children}</li>;
 }
