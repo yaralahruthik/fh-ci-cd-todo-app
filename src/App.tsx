@@ -22,7 +22,7 @@ export default function App() {
   return (
     <div className="container mx-auto p-10 space-y-4">
       <h1 className="text-lg font-black">Tasks</h1>
-        <AddTask onAddTask={onAddTask} />
+      <AddTask onAddTask={onAddTask} />
       <TaskList header={<TaskListHeader count={tasks.length} />}>
         {tasks.map((task) => (
           <TaskListItem key={task.id}>{task.title}</TaskListItem>
