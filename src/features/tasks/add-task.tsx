@@ -13,7 +13,7 @@ import { useForm } from 'react-hook-form';
 import z from 'zod';
 
 const addTaskSchema = z.object({
-  taskName: z.string().min(1, {
+  taskName: z.string().trim().min(1, {
     message: 'Add a descriptive task',
   }),
 });
@@ -32,6 +32,7 @@ export default function AddTask({
 
   function onSubmit(values: z.infer<typeof addTaskSchema>) {
     onAddTask(values.taskName);
+    form.reset();
   }
 
   return (
