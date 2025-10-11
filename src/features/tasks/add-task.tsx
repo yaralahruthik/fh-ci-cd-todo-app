@@ -32,7 +32,7 @@ export default function AddTask({
 
   function onSubmit(values: z.infer<typeof addTaskSchema>) {
     onAddTask(values.taskName);
-    // form.reset();
+    form.reset();
   }
 
   return (
